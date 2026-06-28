@@ -1,32 +1,50 @@
 # espidf-esp32-c6-to-gm861
-Сканер штрих-кодов GM861-LED пример использования
+
+**ESP32-C6 + GM861-LED** — barcode scanner UART connection example.
 
 <img width="704" height="339" alt="image" src="https://github.com/user-attachments/assets/3b9b8583-70c7-4d49-ae7f-bf99c5d012cc" />
 
+---
 
-Пару подсказок. 
-- Шанс того что продаван написал правду в описании товара 0
+## Wiring
 
-- Даже если уверен что стоит режим UART все равно сканируй QR из мануала
-<img width="93" height="105" alt="image" src="https://github.com/user-attachments/assets/87d7571b-c698-4148-a627-7bb43d2c99ae" />
+See [WIRING.md](WIRING.md) for the full connection diagram.
 
-- Если отсканировал (модуль моргнул зеленый) а ничего не происходит, поменяй пины RX TX местами 
+---
 
-- Помни что цвета занчения не имеют
+## Tips
 
-- порядок соовтетвует мануалу, по крайней мере в моей версии, а вот цвета уже нет
-<img width="610" height="231" alt="image" src="https://github.com/user-attachments/assets/46bc37f9-53e2-4cc1-9827-affc38f5f629" />
+- There's a **0% chance** the seller told the truth in the product description
+- Even if you're sure UART mode is set — **still scan the QR code** from the manual first
 
-- питание 3.3V 
+  <img width="93" height="105" alt="image" src="https://github.com/user-attachments/assets/87d7571b-c698-4148-a627-7bb43d2c99ae" />
 
-- нет led так просто не отключить 
+- If you scanned (module blinked green) but nothing happens — **swap RX and TX pins**
+- **Colors don't matter** — the pin order matches the manual (at least in my version), but the colors don't
+- Power: **3.3V**
+- No, the LED cannot be simply disabled
+- Almost any GPIO pins work for software RX/TX
+- Better **not to use** the pins labeled RX/TX on the board
+- If it still doesn't work — scan the QR codes from the manual one by one for standard settings
 
-- да почти любые пины подойдут под программый rx tx 
+  <img width="596" height="186" alt="image" src="https://github.com/user-attachments/assets/99cba75c-5087-4c25-b8a3-5d7b5062ba37" />
 
-- лучше не вешать на те что указаны на плате как RX TX 
+QR codes are listed by name in the manual.
 
-- если все еще не идет бери QR из мануала и вводи все по очереди для стандартный настроек
+---
 
-<img width="596" height="186" alt="image" src="https://github.com/user-attachments/assets/99cba75c-5087-4c25-b8a3-5d7b5062ba37" />
+## Build & Flash
 
-QR по названиям найдете в мануале 
+```bash
+idf.py set-target esp32c6
+idf.py build
+idf.py flash monitor
+```
+
+---
+
+## Links
+
+- [Русская версия](README_RU.md)
+- [中文版](README_CN.md)
+- [PDF manual](GM861%20GM861-LED%20Barcode%20reader%20module%20User%20Manual-V1.2.4.pdf)
