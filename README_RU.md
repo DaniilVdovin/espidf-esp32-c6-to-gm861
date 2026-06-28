@@ -1,5 +1,9 @@
 # espidf-esp32-c6-to-gm861
 
+- [English version](README.md)
+- [中文版](README_CN.md)
+- [PDF-мануал](GM861%20GM861-LED%20Barcode%20reader%20module%20User%20Manual-V1.2.4.pdf)
+
 **ESP32-C6 + GM861-LED** — сканер штрих-кодов, пример подключения через UART.
 
 <img width="704" height="339" alt="image" src="https://github.com/user-attachments/assets/3b9b8583-70c7-4d49-ae7f-bf99c5d012cc" />
@@ -34,21 +38,3 @@
   <img width="596" height="186" alt="image" src="https://github.com/user-attachments/assets/99cba75c-5087-4c25-b8a3-5d7b5062ba37" />
 
 QR по названиям найдёте в мануале.
-
----
-
-## Сборка и прошивка
-
-```bash
-idf.py set-target esp32c6
-idf.py build
-idf.py flash monitor
-```
-
----
-
-## Ссылки
-
-- [English version](README.md)
-- [中文版](README_CN.md)
-- [PDF-мануал](GM861%20GM861-LED%20Barcode%20reader%20module%20User%20Manual-V1.2.4.pdf)
