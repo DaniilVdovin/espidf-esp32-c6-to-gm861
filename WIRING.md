@@ -4,24 +4,24 @@
   ┌─────────────────┐          ┌─────────────────┐
   │   GM861-LED     │          │    ESP32-C6     │
   │                 │          │                 │
-  │  TX (white)  ●──┼──────────┼──● GPIO 18 (RX) │
+  │  TX          ●──┼──────────┼──● GPIO 18 (RX) │
   │                 │          │                 │
-  │  RX (green)  ●──┼──────────┼──● GPIO 19 (TX) │
+  │  RX          ●──┼──────────┼──● GPIO 19 (TX) │
   │                 │          │                 │
-  │  VCC (red)   ●──┼──────────┼──● 3.3V         │
+  │  VCC         ●──┼──────────┼──● 3.3V         │
   │                 │          │                 │
-  │  GND (black) ●──┼──────────┼──● GND          │
+  │  GND         ●──┼──────────┼──● GND          │
   └─────────────────┘          └─────────────────┘
 ```
 
 ## Pin details
 
-| GM861-LED wire (mb) | GM861-LED pin | ESP32-C6 pin | Notes                     |
-|----------------|---------------|--------------|---------------------------|
-| White          | TX (output)   | GPIO 18      | Scanner → ESP             |
-| Green          | RX (input)    | GPIO 19      | ESP → Scanner             |
-| Red            | VCC           | 3.3V         | Power, not 5V!            |
-| Black          | GND           | GND          | Common ground             |
+| GM861-LED pin | ESP32-C6 pin | Notes                     |
+|---------------|--------------|---------------------------|
+| TX (output)   | GPIO 18      | Scanner → ESP             |
+| RX (input)    | GPIO 19      | ESP → Scanner             |
+| VCC           | 3.3V         | Power, not 5V!            |
+| GND           | GND          | Common ground             |
 
 ## Important
 
