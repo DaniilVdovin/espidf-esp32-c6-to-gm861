@@ -16,7 +16,7 @@
 
 ## Pin details
 
-| GM861-LED wire | GM861-LED pin | ESP32-C6 pin | Notes                     |
+| GM861-LED wire (mb) | GM861-LED pin | ESP32-C6 pin | Notes                     |
 |----------------|---------------|--------------|---------------------------|
 | White          | TX (output)   | GPIO 18      | Scanner → ESP             |
 | Green          | RX (input)    | GPIO 19      | ESP → Scanner             |
